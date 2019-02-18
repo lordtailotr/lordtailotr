@@ -4,15 +4,6 @@ const ayarlar = require('../ayarlar.json');
 
 var prefix = ayarlar.prefix;
 
-const girismesaj = [
-  'Botumuzun özelliklerini öğrenmek için h!yardım komutunu kullanabilirsin.',
-  '**ÖNEMLİ:** Botun kullanması için mod-log kanalı açın ve deneme için',
-  'h!uyarı komutunu kullanın.',
-  '',
-  `CST resmi sunucusu : https://discord.gg/yq69bGz`,
-  `**cst sunucusu** https://discord.gg/yq69bGz`
-]
-
 client.on('guildCreate', guild => {
     const generalChannel = guild.defaultChannel
     generalChannel.sendMessage(girismesaj)
