@@ -15,7 +15,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yazkenbot',
+  name: 'yazlordtailotrbot',
   description: 'İstediğiniz şeyi bota yazdırır.',
-  usage: 'yazkenbot <mesaj>'
+  usage: 'yazlordtailotrbot <mesaj>'
 };
