@@ -8,7 +8,7 @@ exports.run = (client, message, params) => {
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-    message.author.sendCode('asciidoc', `= Komut Listesi =\n\n[Komut hakkında bilgi için ${ayarlar.prefix}yardım <komut adı>]\n\n${client.commands.map(c => `${ayarlar.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`);
+    message.author.sendCode('asciidoc', `= Yetkili Komut Listesi =\n\n[Komut hakkında bilgi için ${ayarlar.prefix}komutlar <komut adı>]\n\n${client.commands.map(c => `${ayarlar.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`);
   if (message.channel.type !== 'dm') {
     const ozelmesajkontrol = new Discord.RichEmbed()
     .setColor(0x00AE86)
@@ -29,12 +29,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['h', 'halp', 'help', 'y'],
+  aliases: ['k', 'komut', 'komutlar4', 'komutyardım'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'yardım',
+  name: 'komutlar',
   description: 'Tüm komutları gösterir.',
-  usage: 'yardım [komut]'
+  usage: 'komutlar [komut]'
 };
