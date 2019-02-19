@@ -78,6 +78,23 @@ client.unload = command => {
   });
 };
 
+//BOT HAKKINDA BİLGI
+client.on("message", message => {
+    if (message.content.toLowerCase() === prefix + "Lord TaiLoTr botbilgisi") {
+        const embed = new Discord.RichEmbed()
+            .addField("Bot Adı", `Lord TaiLoTr Bot bilgileri`, true)
+            .addField("Komutlarına ulaşmak", `+komutlar yazmanız yeterli`, true)
+            .addField("Botun Yöneticisi", "Sunucu botudur, yönetimi bize aittir!", true)
+            .addField("Bulunduğu Sunucu Sayısı", client.guilds.size, true)
+            .addField("Toplam Kullanıcı Sayısı", client.users.size, true)
+            .addField("Toplam Kanal Sayısı", client.channels.size, true)
+            .setColor("RANDOM")
+        return message.channel.sendEmbed(embed)
+    }
+});
+//BOT HAKKINDA BİLGİ SONU
+
+
 client.elevation = message => {
   if(!message.guild) {
 	return; }
