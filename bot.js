@@ -80,7 +80,7 @@ client.unload = command => {
 
 //BOT HAKKINDA BİLGI
 client.on("message", message => {
-    if (message.content.toLowerCase() === prefix + "Lord TaiLoTr botbilgisi") {
+    if (message.content.toLowerCase() === prefix + "lordtailotrbotbilgisi") {
         const embed = new Discord.RichEmbed()
             .addField("Bot Adı", `Lord TaiLoTr Bot bilgileri`, true)
             .addField("Komutlarına ulaşmak", `+komutlar yazmanız yeterli`, true)
