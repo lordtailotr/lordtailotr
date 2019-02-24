@@ -29,7 +29,7 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['k', 'komut', 'komutlar4', 'komutyardım'],
+  aliases: ['k', 'komut', 'komutlar3', 'komutyardım'],
   permLevel: 0
 };
 
